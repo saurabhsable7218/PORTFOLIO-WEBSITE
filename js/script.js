@@ -28,3 +28,17 @@ $(document).ready(function(){
     });
      
  });
+
+function submitForm(event) {
+    event.preventDefault();
+    // Formspree submission (if needed)
+    document.forms["submit-to-whatsapp"].submit();
+
+    // WhatsApp message
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let message = document.getElementById("usertext").value;
+    let encodedMessage = encodeURIComponent("Hello Saurabhhh!!, I am " + name + ". My phone number is " + phone + ". I would like to connect with you, ("+ message+")" ) ;
+
+    window.location.href = "https://wa.me/7218710701?text=" + encodedMessage;
+}
