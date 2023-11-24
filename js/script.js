@@ -29,7 +29,7 @@ $(document).ready(function(){
      
  });
 
-function submitForm(event) {
+ function submitForm(event) {
     event.preventDefault();
     // Formspree submission (if needed)
     document.forms["submit-to-whatsapp"].submit();
