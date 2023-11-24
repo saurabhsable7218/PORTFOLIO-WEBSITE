@@ -8,15 +8,13 @@ let typed = new Typed(".changeable", {
 
 
 // Music
-let i = 1;
-let music = () => {
-    if (i % 2 == 1) {
-        document.getElementById("music").play();
-        i++;
-    }
-    else {
-        document.getElementById("music").pause();
-        i++;
+function toggleMusic() {
+    var audio = document.getElementById("music");
+
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
     }
 }
 //slider
