@@ -1,6 +1,6 @@
 // Typewritter Effect
 let typed = new Typed(".changeable", {
-    strings: ["Web Developement.", "Android Development.", "Graphics Designing.", "Video Editing."],
+    strings: ["Web Developement.", "Android Development.", "Graphics Designing.", "Video Editing.", "Automation and Robotics."],
     typeSpeed: 70,
     backSpeed: 70,
     loop: true
@@ -19,3 +19,12 @@ let music = () => {
         i++;
     }
 }
+//slider
+
+$(document).ready(function(){
+	
+    $(".the_slider").slicarousel({
+       nbr_slides: 4,
+    });
+     
+ });
