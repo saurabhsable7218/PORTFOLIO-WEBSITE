@@ -31,13 +31,13 @@ body {
     /* border: 1px solid #ff9100; */
     border-radius: 100%;
     text-align: center;
-    background: linear-gradient(125deg, #0068a5, #1aabff);
-    color: #ffffff;
+    background: linear-gradient(125deg, #ff9d14, #ffd79e);
+    color: #452800;
     transition: 0.2s;
 }
 
 .top-arrow:hover {
-    background: linear-gradient(125deg, #005c91, #00a2ff);
+    background: linear-gradient(125deg, #ff9d14, #ffe3bd);
 }
 
 /* Navbar */
@@ -89,8 +89,8 @@ body {
 
 .navbar .nav-container li a#active,
 .navbar .nav-container li a:hover {
-    color: #011aff;
-    border-bottom: 2px solid #011aff;
+    color: #854d00;
+    border-bottom: px solid #000000;
 }
 
 .hamburger {
@@ -285,10 +285,14 @@ main .main-container {
 /* About */
 
 main .about-container {
+    background-image: url(https://i.ibb.co/rF31Mrk/Untitled-1.jpg);
+
+    background-repeat: no-repeat;
+    object-fit: cover;
     width: 100%;
-    height: 90vh;
-    background-color: #ffffff;
+    height: 100vh;
     padding: 2rem 9rem 0;
+    
 }
 
 main .about-container>div>h2 {
@@ -318,7 +322,7 @@ main .about-container section .left img {
     width: 65%;
     box-shadow: 0px 5px 10px 0px #00000098;
     border-radius: 2rem;
-    background: linear-gradient(-45deg, #EADBC8 , #faf5ed);
+    background: linear-gradient(-45deg, #c49456 , #faf5ed);
 }
 
 main .about-container section .right {
@@ -379,7 +383,7 @@ main .about-container section .right .resume-btn:hover {
 
 main .skills-container {
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     background-color: #EADBC8;
     padding: 1.3rem 4rem 0;
 }
@@ -396,7 +400,7 @@ main .skills-container h2 span {
 
 
 main .skills-container section {
-    height: 70%;
+    height: 78%;
     margin-top: 2rem;
     border-radius: 1rem;
     border: 1px solid #ffffff57;
@@ -816,3 +820,4 @@ footer .contact-container>.copyright i {
     margin-top: -40px;
     display: block;
 }
+
