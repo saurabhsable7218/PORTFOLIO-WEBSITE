@@ -344,7 +344,7 @@
                             +91-7218710701</a></p>
                     <p><a href="mailto:saurabhsable62@gmail.com" id="active"><i
                                 class="fa-solid fa-envelope"></i>&nbsp; saurabhsable62@gmail.com</a></p>
-                    <p><a href="https://maps.app.goo.gl/Lm5T8931FGa24auZ6" id="active"
+                    <p><a target="_blank" rel="noopener"><i class="fa-solid fa-map-location-dot"></i>&nbsp; Pune, India - 411033</a>
                             target="_blank"><i class="fa-solid fa-map-location-dot"></i>&nbsp; Pune, India - 411033</a>
                     </p>
                 </div>
@@ -364,21 +364,34 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxw9b4TdHB6HnWdIvWQqlL1PK5soy4D4RYBRTwmHCye0tkVBk6H7FiU4JZvr9YEGmKquQ/exec'
         const form = document.forms['submit-to-google-sheet']
-        const msg=document.getElementById("msg")
-      
+        const msg = document.getElementById("msg")
+    
         form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                },5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error(`Network response was not ok. Status: ${response.status}`);
+            }
         })
-      </script>
+        .then(data => {
+            console.log('Success:', data);
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(function () {
+                msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            msg.innerHTML = `Error submitting the form: ${error.message}. Please try again.`;
+        });
+});
+
+    </script>
+    
 </body>
 
 </html>
